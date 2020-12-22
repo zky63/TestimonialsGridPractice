@@ -79,7 +79,7 @@ img {
     font-family: 'Barlow Semi Condensed';
     font-size: 20px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 24px;
     text-align: left;
     margin-left: 32px;
@@ -109,6 +109,10 @@ img {
     color: white;
 }
 
+.grid__item--dark .item__caption {
+    font-weight: 500;
+}
+
 #daniel {
     background: url('images/bg-pattern-quotation.svg');
     background-repeat: no-repeat;
@@ -129,6 +133,11 @@ img {
     background-color: #19202D;
 }
 
+
+#jeaneatte .item__quote, #patrick .item__quote, #kira .item__quote {
+    margin-bottom: 26px;
+}
+
 @media only screen and (max-width: 600px){
 
     .grid {
@@ -137,6 +146,7 @@ img {
         display: flex;
         flex-direction: column;
         width: 327px;
+        height: 1824px;
     } 
 
     #daniel {
