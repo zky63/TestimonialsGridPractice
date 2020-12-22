@@ -1,0 +1,167 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(236, 242, 248, 1 );
+}
+
+.grid {
+    margin: 164px auto;
+    box-sizing: border-box;
+    width: 1110px;
+    height: 572px;
+    display: grid;
+    column-gap: 30px;
+    row-gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 282px 266px;
+    grid-auto-flow: row;
+}
+
+.grid__item {
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.grid__item--midHeight, .grid__item--tallHeight {
+    grid-row: auto;
+}
+
+.grid__item--wide {
+    grid-column: auto / span 2;
+}
+
+.grid__item--tall {
+    grid-row: auto / span 2;
+}
+
+img {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-top: 26px;
+    margin-left: 32px;
+}
+
+.img__background--light {
+    border: 2px solid #A775F1;
+}
+
+.img__background--dark {
+    border: 2px solid #733FC8;
+}
+
+.item__info {
+    display: inline-block;
+    font-family: 'Barlow Semi Condensed';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 13px;
+    text-align: left;
+    margin-left: 13px;
+}
+
+.item__info__title{
+    font-family: 'Barlow Semi Condensed';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px; 
+    text-align: left;
+    padding-top: 4px;
+    opacity: 0.5;
+}
+
+.item__caption {
+    display: block;
+    font-family: 'Barlow Semi Condensed';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 5px;
+    margin-bottom: 16px;
+}
+
+.item__quote {
+    font-family: 'Barlow Semi Condensed';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    margin-left: 32px;
+    margin-right: 32px;
+    opacity: 0.7;
+}
+
+.grid__item--white {
+    background-color: white;
+    color:#48556A;
+}
+
+.grid__item--dark {
+    color: white;
+}
+
+#daniel {
+    background: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position-x: 356px;
+    background-color: #733FC8;
+}
+
+#daniel .item__quote {
+    color: #CFCFCF;
+}
+
+#jonathan {
+    background-color: #48556A;
+}
+
+
+#patrick {
+    background-color: #19202D;
+}
+
+@media only screen and (max-width: 600px){
+
+    .grid {
+        margin: auto;
+        margin-top: 71px;
+        display: flex;
+        flex-direction: column;
+        width: 327px;
+    } 
+
+    #daniel {
+        order: 1;
+        background-position-x: 199px;
+    }
+
+    #jonathan {
+        order: 2;
+    }
+
+    #kira {
+        order: 5;
+    }
+
+    #jeanette {
+        order: 3;
+    }
+
+    #patrick {
+        order: 4;
+    }
+
+    .item__quote {
+        margin-bottom: 32px;
+    }
+    
+}
